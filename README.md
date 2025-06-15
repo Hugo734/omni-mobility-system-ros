@@ -6,8 +6,8 @@ This work was created for Activity 1.5: Motion Test with an Omnidirectional Robo
 
 📽️ Demo
 
+https://github.com/user-attachments/assets/f89d2aac-42d5-40e9-87ea-0ad41d847922
 
-https://github.com/user-attachments/assets/5ad9209b-28a3-4b9d-8d54-0a736f19174d
 
 
 A demonstration video showing the robot executing live Twist commands can be found in the demo/ folder or click here if browsing locally.
@@ -29,8 +29,7 @@ LEDs and servos (optional features)
 🧠 Software Stack
 
 Python 3
-
-ROS2 (Foxglove, Humble or compatible)
+ROS2 (Humble)
 
 gRPC for Raspberry Pi motor control
 
@@ -59,24 +58,6 @@ self.w = np.array([
 ], dtype=np.float64) / self.r
 
 This was the main change made to adapt the base motor control code to work with omnidirectional motion.
-
-🧪 Repository Structure
-
-TrinityDrive/
-|
-├── src/
-|   └── RPIMotorService.py         # gRPC-based motor control script with kinematic update
-|
-├── scripts/
-|   └── twist_listener.py          # Optional ROS2 node that listens to /cmd_vel and calls SetState()
-|
-├── demo/
-|   └── video.mp4                  # Demonstration video
-|
-├── docs/
-|   └── reporte.pdf                # Brief technical report
-|
-└── README.md                      # This file
 
 🚀 How to Run
 
