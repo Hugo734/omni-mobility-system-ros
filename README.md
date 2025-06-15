@@ -1,10 +1,14 @@
-🤖 Omnidirectional Robot Control with ROS2 and Python
+Omnidirectional Robot Control with ROS2 and Python
 
-TrinityDrive is a control system for a three-wheel omnidirectional robot, developed using Python, ROS2, and a Raspberry Pi. This project implements the inverse kinematics needed to transform high-level motion commands (via geometry_msgs/Twist) into angular velocities for each wheel, enabling precise omnidirectional movement.
+This a control system for a three-wheel omnidirectional robot, developed using Python, ROS2, and a Raspberry Pi. This project implements the inverse kinematics needed to transform high-level motion commands (via geometry_msgs/Twist) into angular velocities for each wheel, enabling precise omnidirectional movement.
 
 This work was created for Activity 1.5: Motion Test with an Omnidirectional Robot in the Mobile Ground Robots course at ITESM (June 2025).
 
 📽️ Demo
+
+
+https://github.com/user-attachments/assets/5ad9209b-28a3-4b9d-8d54-0a736f19174d
+
 
 A demonstration video showing the robot executing live Twist commands can be found in the demo/ folder or click here if browsing locally.
 
