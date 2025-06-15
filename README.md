@@ -16,30 +16,30 @@ A demonstration video showing the robot executing live Twist commands can be fou
 
 🛠 Hardware Used
 
-Raspberry Pi (with GPIO support)
-
-3 omnidirectional wheels placed at 120° angles
-
-DC motors with encoders
-
-Motor drivers
-
-LEDs and servos (optional features)
+    Raspberry Pi (with GPIO support)
+    
+    3 omnidirectional wheels placed at 120° angles
+    
+    DC motors with encoders
+    
+    Motor drivers
+    
+    LEDs and servos (optional features)
 
 🧠 Software Stack
 
-Python 3
-ROS2 (Humble)
-
-gRPC for Raspberry Pi motor control
-
-teleop_twist_keyboard for velocity command input
+    Python 3
+    ROS2 (Humble)
+    
+    gRPC for Raspberry Pi motor control
+    
+    teleop_twist_keyboard for velocity command input
 
 📐 Inverse Kinematics
 
 The robot receives desired linear and angular velocities (Vx, Vy, ωz) and converts them into angular velocities (ωi) for each of the three wheels using the following equations:
 
-\omega_i = \frac{1}{r}(-\sin(\theta_i) V_x + \cos(\theta_i) V_y + R \cdot \omega_z)
+ωᵢ = ( -sin(θᵢ)·Vₓ + cos(θᵢ)·Vᵧ + R·ω_z ) / r
 
 Where:
 
@@ -47,15 +47,12 @@ r: radius of the wheel (0.024 m)
 
 R: distance from center to wheel (0.1041 m)
 
-\theta_i: orientation of each wheel (0, 120°, 240°)
+θᵢ: orientation of each wheel (0, 120°, 240°)
 
 These equations were implemented inside the SetState method in the RPIMotorService.py file, as follows:
 
-self.w = np.array([
-    -math.sin(0) * self.v_x + math.cos(0) * self.v_y + self.R * self.v_yaw,
-    -math.sin(2*math.pi/3) * self.v_x + math.cos(2*math.pi/3) * self.v_y + self.R * self.v_yaw,
-    -math.sin(4*math.pi/3) * self.v_x + math.cos(4*math.pi/3) * self.v_y + self.R * self.v_yaw
-], dtype=np.float64) / self.r
+<img width="665" alt="image" src="https://github.com/user-attachments/assets/883eb30a-2eec-4273-8ff4-590b65a4841b" />
+
 
 This was the main change made to adapt the base motor control code to work with omnidirectional motion.
 
@@ -78,21 +75,19 @@ If using twist_listener.py, make sure ROS2 and gRPC stubs are set up, then run:
 
 python3 scripts/twist_listener.py
 
-📄 Report
 
-A concise technical report detailing the derivation and implementation is available at:
-
-docs/reporte.pdf
 
 👨‍💻 Contributors
 
 Hugo Daniel Castillo Ovando (A00836025)
-
-[Other team members if applicable]
+Rosendo De Los R´ıos (A01198515)
+Jes´us Garc´ıa (A01369587)
+V´ıctor Meneses (A01384002)
+Rub´en Hilario (A00835860)
+Juan Jos´e J´auregui (A00836722)
+Jordan Palafox (A00835705)
 
 🏁 Final Notes
 
 This project showcases the integration of theory, control systems, and practical testing to achieve synchronized omnidirectional movement using ROS2 and embedded systems. It also serves as a base for future swarm robotics or path planning extensions.
-
-Made with ❤️ for the Mobile Robots class @ ITESM, 2025.
 
