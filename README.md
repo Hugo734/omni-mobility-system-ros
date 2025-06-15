@@ -79,11 +79,11 @@ python3 scripts/twist_listener.py
 👨‍💻 Contributors
 
     Hugo Daniel Castillo Ovando (A00836025)
-    Rosendo De Los R´ıos (A01198515)
-    Jes´us Garc´ıa (A01369587)
-    V´ıctor Meneses (A01384002)
-    Rub´en Hilario (A00835860)
-    Juan Jos´e J´auregui (A00836722)
+    Rosendo De Los Ríos (A01198515)
+    Jesús García (A01369587)
+    Víctor Meneses (A01384002)
+    Rubén Hilario (A00835860)
+    Juan José Jáuregui (A00836722)
     Jordan Palafox (A00835705)
 
 🏁 Final Notes
