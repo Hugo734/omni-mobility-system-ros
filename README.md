@@ -39,15 +39,15 @@ A demonstration video showing the robot executing live Twist commands can be fou
 
 The robot receives desired linear and angular velocities (Vx, Vy, ωz) and converts them into angular velocities (ωi) for each of the three wheels using the following equations:
 
-ωᵢ = ( -sin(θᵢ)·Vₓ + cos(θᵢ)·Vᵧ + R·ω_z ) / r
+    ωᵢ = ( -sin(θᵢ)·Vₓ + cos(θᵢ)·Vᵧ + R·ω_z ) / r
 
 Where:
 
-r: radius of the wheel (0.024 m)
-
-R: distance from center to wheel (0.1041 m)
-
-θᵢ: orientation of each wheel (0, 120°, 240°)
+    r: radius of the wheel (0.024 m)
+    
+    R: distance from center to wheel (0.1041 m)
+    
+    θᵢ: orientation of each wheel (0, 120°, 240°)
 
 These equations were implemented inside the SetState method in the RPIMotorService.py file, as follows:
 
@@ -60,8 +60,7 @@ This was the main change made to adapt the base motor control code to work with 
 
 Clone the repository:
 
-git clone https://github.com/yourusername/TrinityDrive.git
-cd TrinityDrive
+Download the .zip with the name omni.zip
 
 Launch the motor control service on the Raspberry Pi:
 
@@ -79,13 +78,13 @@ python3 scripts/twist_listener.py
 
 👨‍💻 Contributors
 
-Hugo Daniel Castillo Ovando (A00836025)
-Rosendo De Los R´ıos (A01198515)
-Jes´us Garc´ıa (A01369587)
-V´ıctor Meneses (A01384002)
-Rub´en Hilario (A00835860)
-Juan Jos´e J´auregui (A00836722)
-Jordan Palafox (A00835705)
+    Hugo Daniel Castillo Ovando (A00836025)
+    Rosendo De Los R´ıos (A01198515)
+    Jes´us Garc´ıa (A01369587)
+    V´ıctor Meneses (A01384002)
+    Rub´en Hilario (A00835860)
+    Juan Jos´e J´auregui (A00836722)
+    Jordan Palafox (A00835705)
 
 🏁 Final Notes
 
